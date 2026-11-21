@@ -1,0 +1,17 @@
+{
+  "manifest_version": 3,
+  "name": "Web Coworker",
+  "version": "0.1.0",
+  "description": "Private AI coworker in your side panel. Ask about any page or let it click and type. Local models or your own key.",
+  "permissions": ["sidePanel", "tabs", "scripting", "storage"],
+  "host_permissions": ["<all_urls>"],
+  "background": { "service_worker": "background.js", "type": "module" },
+  "side_panel": { "default_path": "sidepanel.html" },
+  "action": { "default_title": "Open Web Coworker" },
+  "content_scripts": [
+    { "matches": ["<all_urls>"], "js": ["content.js"], "run_at": "document_idle" }
+  ],
+  "commands": {
+    "_execute_action": { "suggested_key": { "default": "Alt+Shift+C" }, "description": "Open Web Coworker" }
+  }
+}

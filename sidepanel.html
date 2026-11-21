@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Web Coworker</title>
+  <link rel="stylesheet" href="sidepanel.css">
+</head>
+<body>
+  <header>
+    <strong>Web Coworker</strong>
+    <label class="mode"><input type="checkbox" id="act"> Act mode</label>
+    <button id="reset" title="New chat">New</button>
+  </header>
+
+  <details id="settings">
+    <summary>Settings</summary>
+    <form id="settings-form">
+      <label>Provider
+        <select name="provider">
+          <option value="anthropic">Anthropic</option>
+          <option value="openai">OpenAI-compatible (OpenAI, OpenRouter, Ollama, LM Studio)</option>
+        </select>
+      </label>
+      <label>API key <input name="apiKey" type="password" autocomplete="off"></label>
+      <label>Model <input name="model" placeholder="claude-sonnet-5-5"></label>
+      <label>Base URL (OpenAI-compatible only) <input name="baseUrl" placeholder="https://api.openai.com/v1"></label>
+      <button type="submit">Save</button>
+      <small>Key is stored in chrome.storage.local on this device only.</small>
+    </form>
+  </details>
+
+  <main id="log"></main>
+
+  <form id="composer">
+    <textarea id="input" rows="3" placeholder="Ask about this page, or turn on Act mode and give a task…"></textarea>
+    <button id="send" type="submit">Send</button>
+    <button id="stop" type="button" hidden>Stop</button>
+  </form>
+  <script src="sidepanel.js" type="module"></script>
+</body>
+</html>
