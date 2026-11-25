@@ -1,4 +1,10 @@
+
+
+
 # Web Coworker
+
+
+https://github.com/user-attachments/assets/f0daab8a-b7aa-45a5-803c-1f0806264a39
 
 Private AI coworker in your Chrome side panel. Ask about any page, or switch on **Act mode** and it clicks, types and navigates for you.
 
